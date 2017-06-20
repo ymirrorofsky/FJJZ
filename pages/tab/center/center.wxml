@@ -1,0 +1,33 @@
+<view class="user-head">
+  <view class="center" bindtap="userdata">
+  <navigator url="../../edit/edit">
+  <view class="edit">
+   <image src="../../../images/edit.png"></image>编辑
+  </view>
+  </navigator>
+    <view class="user-img">
+      <image src="{{userInfo.avatarUrl}}" />
+    </view>
+    <view class="user-text">
+      <text class="text">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>
+<view class="classname">
+  <block wx:for-items="{{list}}">
+    <view class="widgets__item">
+      <view id="{{item.id}}" class="widgets__info {{item.open ? 'widgets__info_hide' : ''}}" bindtap="widgetsToggle">
+        <text class="widgets__info-name">{{item.title}}</text>
+        <image class="widgets__info-img" src="../../../images/arrowright.png" mode="aspectFill" />
+      </view>
+      <navigator url="{{item.url}}">
+        <view class="widgets__table {{item.open ? 'widgets__table_hide' : ''}}">
+          <image class="widgets__table-img" src="../../../images/arrowright.png" mode="aspectFill" />
+          <text class="widgets__table-name">{{item.item}}</text>
+        </view>
+      </navigator>
+
+    </view>
+  </block>
+</view>
+

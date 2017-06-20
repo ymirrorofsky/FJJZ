@@ -1,0 +1,48 @@
+<!--pages/payinfo/payinfo.wxml-->
+<view class="wrapper">
+  <view class='tip bdbgray' style="display:flex;">
+    <view bindtap="getLocation">
+      <image src="../../../images/location.png" />
+    </view>
+    <text>点击自动获取您的位置信息</text>
+  </view>
+  <form class="bgwhite">
+    <view class="flex-wrap bgwhite bdbgray">
+      <label>联系人姓名</label>
+      <input type="text" value='{{name}}' placeholder="请输入联系人姓名" class="flex-item" bindinput="bindName" />
+    </view>
+    <view class="flex-wrap bgwhite bdbgray">
+      <label>联系人电话</label>
+      <input type="text" value='{{mobile}}' placeholder="请输入联系人电话" class="flex-item" bindinput="bindMobile" />
+    </view>
+    <view class="flex-wrap bgwhite bdbgray">
+      <label>预约时间</label>
+      <view class="section flex-item">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" class="date">
+          <view class="picker">
+            {{date}}
+          </view>
+        </picker>
+        <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+          <view class="picker">
+            {{time}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="flex-wrap bgwhite bdbgray">
+      <label>联系人地址</label>
+      <input type="text" value='{{address}}' placeholder="请输入联系人地址" class="flex-item" bindinput="bindAddress" />
+    </view>
+    <view class="flex-wrap bgwhite bdbgray">
+      <label>备注</label>
+      <textarea placeholder="填写对阿姨(师傅)交代的话" bindinput="bindMessage" />
+    </view>
+  </form>
+  <view class="money">
+    服务预约金额：<span>￥{{price}}</span>
+  </view>
+</view>
+<view class="footer">
+  <button type="warn" bindtap="submit" >立即预约</button>
+</view>

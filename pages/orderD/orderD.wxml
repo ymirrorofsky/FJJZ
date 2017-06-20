@@ -1,0 +1,24 @@
+<!--pages/orderD/orderD.wxml-->
+<import src="../common/load.wxml"/>
+
+<template is="glo_is_load" data="{{glo_is_load}}"/>
+
+
+
+<view class="bgwhite" wx:if="{{!glo_is_load}}">
+  <view class="classify">
+    <text>{{info.classify}}</text>
+  </view>
+  <view class="lists">
+    <block wx:for="{{info.data}}" wx:for-item="item">
+      <view class="title">{{item.serve_name}}</view>
+      <view class="desc">{{item.desc}}</view>
+    </block>
+  </view>
+  <view class="money">
+    服务预约金额：<span>￥{{info.totalPrice}}</span>
+  </view>
+</view>
+<view class="footer">
+  <button type="primary" bindtap="submit">立即预约</button>
+</view>

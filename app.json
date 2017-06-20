@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/tab/service/service",
+    "pages/edit/edit",
+    "pages/tab/center/center",
+    "pages/comment/comment",
+    "pages/slists/slists",
+    "pages/payinfo/payinfo",
+    "pages/myOrder/myOrder",
+    "pages/test/test",
+    "pages/tab/evaluate/evaluate",
+    "pages/orderD/orderD"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#09BB07",
+    "navigationBarTitleText": "鼎盛时代",
+    "navigationBarTextStyle": "white",
+    "navigationBarTextAlign": "left",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#292929",
+    "selectedColor": "#09BB07",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/tab/service/service",
+        "text": "服务下单",
+        "iconPath": "images/tabbar/reservation.png",
+        "selectedIconPath": "images/tabbar/reservation_in.png"
+      },
+      {
+        "pagePath": "pages/tab/evaluate/evaluate",
+        "text": "客服评价",
+        "iconPath": "images/tabbar/weiye.png",
+        "selectedIconPath": "images/tabbar/weiye_in.png"
+      },
+      {
+        "pagePath": "pages/tab/center/center",
+        "text": "会员中心",
+        "iconPath": "images/tabbar/user.png",
+        "selectedIconPath": "images/tabbar/user_in.png"
+      }
+    ]
+  }
+}

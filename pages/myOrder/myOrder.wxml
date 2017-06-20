@@ -1,0 +1,34 @@
+<!--pages/myOrder/myOrder.wxml-->
+<!--<scroll-view scroll-y="true" height="100%"  class="wrapper" wx:if="{{glo_is_load}}">-->
+<import src="../common/load.wxml" />
+<import src="../common/tip.wxml" />
+<template is="glo_is_load" data="{{glo_is_load}}" />
+<block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:if="{{!glo_is_load}}">
+  <view class="list bgwhite ">
+    <view class='top flex-wrap'>
+      <text>{{item.details_id}}</text>
+      <view bindtap="getLocation">
+        <image src="../../images/delete.png" />
+      </view>
+    </view>
+    <view class="middle flex-wrap">
+      <image src="../../images/time.png" />
+      <view class="time">{{item.order_time}}</view>
+      <view class="money flex-item">￥{{item.total}}</view>
+    </view>
+    <view class="bottom">
+      <view class="pay">支付</view>
+    </view>
+  </view>
+</block>
+<template is="tip" data="{{noMore}}" />
+<!--</scroll-view>-->
+<view class="toast_mask" wx:if="{{isShowToast}}">
+  <view class="toast_content_box" wx:if="{{isShowToast}}">
+    <view class="toast_content">
+      <view class="toast_content_text">
+        {{toastText}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<import src="../../common/load.wxml" />
+
+<template is="glo_is_load" data="{{glo_is_load}}"/>
+
+<view class="container" wx:if="{{!glo_is_load}}">
+  <view class="head">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{banner}}" wx:for-index="index">
+        <swiper-item>
+          <image src="{{item.slide_image}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='tip'>
+    <text>附近家政：基于您位置附近工作人员10分钟快速反馈</text>
+  </view>
+  <block>
+    <view class='list'>
+      <block wx:for="{{service}}">
+        <navigator url='../../slists/slists?id={{item.id}}' class='list-item bdb bdr'>
+          <view>
+            <view>
+              <image src="{{item.classify_image}}" />
+            </view>
+            <text>{{item.classify_name}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </block>
+</view>
+<view class="icons">
+  <view class="evaluate">
+    <contact-button type="default-light" size="20" session-from="weapp">
+    </contact-button>
+  </view>
+</view>

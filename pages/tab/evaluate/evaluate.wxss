@@ -1,0 +1,177 @@
+.wrapper {
+  font-size: 25rpx;
+  font-family: '微软雅黑';
+}
+
+.tip {
+  padding: 30rpx 30rpx;
+  color: #3498db;
+  background: #fff;
+  align-items: center;
+}
+
+.tip text {
+  flex: 7;
+}
+
+.tip view {
+  flex: 1;
+}
+
+.tip image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.tab {
+  margin-top: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.tab text {
+  flex: 1;
+  margin: 0 70rpx;
+  padding: 25rpx 0;
+  text-align: center;
+  font-size: 35rpx;
+}
+
+.tab text.on {
+  color: #09bb07;
+  border-bottom: 3px solid #09bb07;
+}
+
+.pd25 {
+  padding: 0 25rpx;
+}
+
+.title {
+  padding: 25rpx 0;
+  align-items: center;
+  font-size: 30rpx;
+  border-bottom: 1px solid #eee;
+  color: #9b9b9b;
+}
+
+.title image {
+  display: block;
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+  position: relative;
+  top: -1rpx;
+}
+
+.ser .cnt {
+  /*justify-content: space-between;*/
+  padding: 25rpx 0;
+}
+
+.ser .list {
+  box-sizing: border-box;
+  background: #f4fbf3;
+  padding: 10rpx;
+  color: #4eab5a;
+  width: 33.33%;
+  border-right: 15rpx solid #fff;
+  border-bottom: 10rpx solid #fff;
+  font-size: 25rpx;
+}
+
+.ser .list image {
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: 1rpx;
+}
+
+.intro .article {
+  padding: 25rpx 0;
+}
+
+.comment .score {
+  padding: 40rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment .score view {
+  color: red;
+  text-align: center;
+  /*margin: 10rpx 0;*/
+}
+
+.comment .score view span {
+  font-size: 80rpx;
+  margin-right: 20rpx;
+  font-family: '微软雅黑';
+  vertical-align: -5rpx;
+}
+
+.comment .score text {
+  display: block;
+  text-align: center;
+  letter-spacing: 3rpx;
+  color: #888;
+}
+
+.comment .mes {
+  padding: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.comment .mes .top {
+  margin-bottom: 25rpx;
+}
+
+.comment .mes .name {
+  color: #a3a3a3;
+}
+
+.comment .mes .grade {
+  margin: 0 20rpx;
+  background: #09bb07;
+  color: #fff;
+  padding: 5rpx 10rpx;
+  border-radius: 50rpx;
+  font-size: 20rpx;
+}
+
+.comment .mes .time {
+  text-align: right;
+  color: #aaa;
+}
+
+.comment .mes .middle {
+  height: 200rpx;
+  position: relative;
+}
+
+.icons {
+  position: fixed;
+  right: 10rpx;
+  bottom: 10rpx;
+  display: flex;
+}
+
+.icons view {
+  padding: 15rpx;
+  background: #09bb07;
+  border-radius: 50%;
+  margin: 0 10rpx;
+}
+
+.icons image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+}
+.wxParse-img{
+  width: 100rpx !important;
+  height: 100rpx !important;
+}
+.wxParse-inline {
+  display: block;
+  margin-bottom: 50rpx;
+}

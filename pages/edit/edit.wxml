@@ -1,0 +1,29 @@
+<!--pages/edit/edit.wxml-->
+<view class="user-head">
+  <view class="center" bindtap="userdata">
+    <view class="user-img">
+      <image src="{{userInfo.avatarUrl}}" />
+    </view>
+    <view class="user-text">
+      <text class="text">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>
+<view class="form">
+  <view class="title">姓名 <span>(8个汉字，16个英文字符)</span> </view>
+  <input placeholder="请输入姓名" value="{{name}}" class="bgwhite" bindinput="bindName" />
+  <view class="title">性别</view>
+  <view class="bgwhite gender">
+    <icon type="{{gender ? 'success' : 'circle'}}" color="lightgreen" size="20" bindtap="genderSel" data-type='0'></icon><text>男</text>
+    <icon type="{{gender ? 'circle' : 'success'}}" color="lightgreen" size="20" bindtap="genderSel" data-type='1'></icon><text>女</text>
+  </view>
+  <view class="title">手机号</view>
+  <input placeholder="请正确填写手机号" value="{{mobile}}" class="bgwhite" bindinput="bindMobile" />
+  <view class="title">地址<span>(18个字以内)</span></view>
+  <input placeholder="18个字以内" value="{{address}}" class="bgwhite" bindinput="bindAddress" maxlength="18"/>
+  <view class="title">详细介绍下自己<span>(100个字以内)</span></view>
+  <textarea placeholder="100个字以内" value="{{intro}}" class="bgwhite" bindinput="bindIntro" maxlength="100" auto-height/>
+</view>
+<view class="submit bgwhite">
+  <button type="primary"  bindtap="submit">提交</button>
+</view>

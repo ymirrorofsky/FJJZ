@@ -1,0 +1,77 @@
+/* pages/edit/edit.wxss */
+
+.user-head {
+  background: #09bb07;
+  height: 250rpx;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.user-head .center {
+  display: flex;
+  flex-flow: column;
+  padding-top: 20rpx;
+}
+
+.user-img {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.user-img image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  border: 10rpx solid #05CC04;
+}
+
+.user-text {
+  text-align: center;
+}
+
+.user-text text {
+  font-family: 微软雅黑;
+  color: #fff;
+  display: block;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+
+.form .title {
+  padding: 25rpx;
+  background: #f1ffef;
+  font-size: 25rpx;
+  color: #09bb07;
+}
+.form .title span{
+  float: right;
+  font-size: 25rpx;
+  color: #A4A6A4;
+}
+.form input {
+  padding: 20rpx;
+  font-size: 25rpx;
+}
+.form textarea {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 25rpx;
+}
+.gender {
+   display: flex;
+   align-items: center;
+}
+.gender icon {
+  margin:0 20rpx;
+}
+.gender text{
+  font-size: 25rpx;
+  vertical-align: middle;
+}
+.submit {
+ padding: 30rpx;
+}

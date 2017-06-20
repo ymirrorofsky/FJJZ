@@ -1,0 +1,82 @@
+/* pages/payinfo/payinfo.wxss */
+
+.wrapper {
+  font-size: 25rpx;
+}
+
+.bdbgray {
+  border-bottom: 1px solid #eee;
+}
+
+.tip {
+  padding: 20rpx;
+   color: #808080;
+  background: #fff;
+  align-items: center;
+}
+
+.tip text {
+  flex: 7;
+}
+
+.tip view {
+  flex: 1;
+}
+
+.tip image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+form .flex-wrap {
+  padding: 20rpx 30rpx;
+}
+
+form .flex-wrap label {
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+form .flex-wrap input {
+  text-align: right;
+}
+
+form .flex-wrap .section {
+  text-align: right;
+    height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+picker {
+  color: #808080;
+  display: inline-block;
+}
+
+form .flex-wrap .section .date {
+  margin-right: 20rpx;
+}
+form textarea {
+  padding: 15rpx;
+  height: 200rpx;
+
+}
+.money {
+  padding: 40rpx;
+  font-size: 25rpx;
+  text-align: right;
+  
+}
+.money span {
+  color: #E64340;
+  font-size: 35rpx;
+}
+.footer{
+	display: block;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #ddd;
+}

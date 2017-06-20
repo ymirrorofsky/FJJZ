@@ -1,0 +1,36 @@
+<import src="../common/load.wxml" />
+<import src="../common/tip.wxml" />
+<template is="glo_is_load" data="{{glo_is_load}}" />
+
+<view class="wrapper" wx:if="{{!glo_is_load}}">
+  <block wx:for="{{service}}">
+    <view class="service flex-wrap flex-direction-row" catchtap="selectSer" data-id="{{item.classify_id}}">
+      <view>
+        <image src="{{item.serve_logo}}" />
+      </view>
+      <view class="flex-item">
+        <text class="title">{{item.serve_name}}</text>
+        <p>{{item.desc}}</p>
+      </view>
+      <view class="add-btn flex-wrap">
+        <icon type="{{item.status ? 'success' : 'circle'}}" color="lightgreen" size="30"></icon>
+      </view>
+    </view>
+  </block>
+
+  <template is="tip" data="{{noMore}}" />
+  
+  <view class="footer">
+    <button type="primary" disabled='{{disabled}}' bindtap="submit">提交</button>
+  </view>
+</view>
+<!--mask-->
+<view class="toast_mask" wx:if="{{isShowToast}}">
+  <view class="toast_content_box" wx:if="{{isShowToast}}">
+    <view class="toast_content">
+      <view class="toast_content_text">
+        {{toastText}}
+      </view>
+    </view>
+  </view>
+</view>

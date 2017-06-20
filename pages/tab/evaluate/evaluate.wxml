@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<!--<scroll-view scroll-y="true" height="100%" bindscrolltoupper='refesh' class="wrapper" >-->
+<import src="../../common/load.wxml" />
+<import src="../../common/tip.wxml" />
+<template is="glo_is_load" data="{{glo_is_load}}" />
+
+<view class="wrapper" wx:if="{{!glo_is_load}}">
+  <view class='tip' style="display:flex;">
+    <text>公告：基于您位置附近工作人员10分钟快速反馈</text>
+    <view bindtap="getLocation">
+      <image src="../../../images/location.png" />
+    </view>
+  </view>
+
+  <view class="tab flex-wrap bgwhite">
+    <text data-type='1' class="{{status == 1 ? 'on':''}}" catchtap="setStatus">详情</text>
+    <text data-type='2' class="{{status == 2 ? 'on':''}}" catchtap="setStatus">点评</text>
+  </view>
+
+  <view class="detail bgwhite" wx:if="{{status == 1}}">
+    <view class="ser pd25">
+      <view class="title flex-wrap">
+        <image src="../../../images/star.png" />
+        <text>服务</text>
+      </view>
+      <view class="flex-wrap flex-wrap-no cnt">
+        <block wx:for="{{detailS}}">
+          <view class="title flex-wrap list">
+            <image src="../../../images/right.png" />
+            <text>{{item.classify_name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="intro bgwhite pd25">
+      <view class="title flex-wrap">
+        <image src="../../../images/star.png" />
+        <text>介绍</text>
+      </view>
+      <view class="article">
+        <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:detailI.nodes}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="comment bgwhite" wx:if="{{status == 2}}">
+    <view class="score">
+      <view><span>{{avescore.avescore}}</span>分</view>
+      <text>全部评论:{{avescore.totals}}条</text>
+    </view>
+    <block wx:for="{{comment}}" wx:for-index='idx'>
+      <view class="mes">
+        <view class="top flex-wrap ">
+          <view class="name">{{item.name}}</view>
+          <view class="grade">{{item.score}}分</view>
+          <view class="time flex-item">{{item.updatetime}}</view>
+        </view>
+        <view class="middle">
+          <block wx:for="{{ replyTemArray }}" wx:for-index="jdx" wx:for-item="j">
+            <block wx:if="{{j.length>0}}">
+              <block wx:if="{{idx == jdx}}">
+                <view>
+                  <template is="wxParse" data="{{wxParseData:j}}" />
+                </view>
+              </block>
+            </block>
+          </block>
+        </view>
+      </view>
+    </block>
+
+  </view>
+    <template is="tip" data="{{noMore}}" />
+  <!--</scroll-view>-->
+  <view class="icons">
+    <view class="evaluate">
+      <navigator url="../../comment/comment">
+        <image src="../../../images/chat.png"></image>
+      </navigator>
+    </view>
+    <view class="contact" bindtap="call">
+      <image src="../../../images/contact.png"></image>
+    </view>
+  </view>
+</view>

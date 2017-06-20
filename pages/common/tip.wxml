@@ -1,0 +1,7 @@
+<template name='tip'>
+  <view class="tips" wx:if="{{noMore}}">
+    <view>
+      <text>没有更多内容了</text>
+    </view>
+  </view>
+</template>

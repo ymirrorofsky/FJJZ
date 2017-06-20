@@ -1,0 +1,55 @@
+/* pages/slists/slists.wxss */
+page {
+  background-color: "#ff0000";
+  display: block;
+  height: 100%;
+}
+scroll-view {
+  margin-bottom:120rpx;
+}
+.wrapper {
+    margin-bottom:120rpx;
+}
+.service {
+  padding: 0.6rem 1.1rem;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.service image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  display: block;
+}
+
+.service .title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.service p {
+  color: #aaa;
+  font-size: 0.7rem;
+}
+
+.service .add-btn {
+  width: 1.6rem;
+  text-align: right;
+  margin:30rpx 0;
+}
+.footer{
+	display: block;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #ddd;
+}
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}

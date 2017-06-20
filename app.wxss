@@ -1,0 +1,128 @@
+/**app.wxss**/
+@import "font.wxss";
+@import "/wxParse/wxParse.wxss";
+
+page {
+  background:#eee;
+  display: block;
+  font-family: '微软雅黑';
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.bdr {
+  border-right: 1px solid #eee;
+}
+
+.bdf {
+  border-left: 1px solid #eee;
+}
+
+.bdb {
+  border-bottom: 1px solid #eee;
+}
+
+.flex-wrap {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.flex-wrap.flex-direction-col {
+  flex-direction: column;
+}
+
+.flex-wrap.flex-direction-row {
+  flex-direction: row;
+}
+.flex-wrap.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.bgwhite {
+  background: white;
+}
+.glo_load_view{text-align: center;padding-top:50%;}
+.iconfont{ font-size: inherit;}
+.iconfont::before{font-family:"iconfont" !important;}
+
+/*mask*/  
+.toast_mask {  
+  width: 100%;  
+  height: 100%;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 888;  
+}  
+/*toast*/  
+.toast_content_box {  
+  display: flex;  
+   top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  justify-content: center;  
+  align-items: center;  
+  position: fixed;  
+  z-index: 999;  
+}  
+.toast_content {  
+  width: 50%;  
+  padding: 20rpx;  
+  background: rgba(0, 0, 0, 0.5);  
+  border-radius: 20rpx;  
+}  
+.toast_content_text {  
+  height: 100%;  
+  width: 100%;  
+  color: #fff;  
+  font-size: 28rpx;  
+  text-align: center;  
+}  
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+.animated {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode: both;
+  display: inline-block;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.rotate {
+  -webkit-animation-name:rotate;
+  animation-name:rotate;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  form{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+  }
+}

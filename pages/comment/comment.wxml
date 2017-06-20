@@ -1,0 +1,28 @@
+<!--pages/comment/comment.wxml-->
+
+<scroll-view scroll-y="true" height="100%" class="wrapper bgwhite">
+  <view class="top flex-wrap">
+    <text>评分</text>
+    <view class="flex-item star">
+      <block wx:for="{{stars}}">
+        <image class="star-image" src="{{key > item ? selectedSrc: normalSrc}}" data-key="{{item+1}}" bindtap="selectRight" />
+      </block>
+    </view>
+  </view>
+  <view class="middle bgwhite">
+    <textarea placeholder="写点什么吧..." auto-focus  value="{{message}}" bindinput='bindKeyInput'/>
+  </view>
+  <view class="bottom">
+    <view class="img-upload">
+      <view class="img-add" bindtap="chooseImage"><image src="../../images/add.png"></image></view>
+      <view class="img-item" wx:for="{{uploadimgs}}" wx:key="{{index}}">
+        <icon type="clear" size="20" color="gray" style="display:{{editable?'block':'none'}}" bindtap="deleteImg" data-index="{{index}}" />
+        <image src="{{item}}" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="submit">
+     <button type="primary" bindtap="submit">提交保存</button>
+  </view>
+</scroll-view>

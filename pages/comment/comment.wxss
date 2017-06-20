@@ -1,0 +1,60 @@
+/* pages/comment/comment.wxss */
+.wrapper {
+  padding:0 30rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.top {
+  padding:30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.top .star {
+  text-align: right;
+}
+.top .star image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 5rpx;
+}
+.middle textarea {
+  font-size: 25rpx;
+  padding: 30rpx 0;
+
+}
+.img-upload {
+	padding: 20rpx 0;
+	font-size: 0;
+	overflow: hidden;
+}
+.img-upload .img-item,
+.img-upload .img-add{
+	width: 150rpx;
+	height: 150rpx;
+	float: left;
+	margin: 5rpx;
+	border: 1rpx solid transparent;
+}
+.img-upload .img-add{
+	border: 1rpx solid #ddd;
+  position: relative;
+}
+.img-upload .img-add image{
+	width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.img-upload .img-item image{
+	width: 150rpx;
+	height: 150rpx;
+}
+.img-upload .img-item{
+	position: relative;
+  overflow: visible;
+}
+.img-upload .img-item icon{
+	position: absolute;
+	right:-12rpx;
+	top: -12rpx;
+}

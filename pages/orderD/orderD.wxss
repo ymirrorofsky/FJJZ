@@ -1,0 +1,39 @@
+/* pages/orderD/orderD.wxss */
+
+.classify {
+  padding: 20rpx 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 30rpx;
+}
+
+.lists {
+  padding: 40rpx 0;
+  margin: 0 40rpx;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.lists .title {
+  color: #13be11;
+}
+
+.money {
+  padding: 40rpx;
+  font-size: 25rpx;
+  text-align: right;
+  
+}
+.money span {
+  color: #E64340;
+  font-size: 35rpx;
+}
+.footer{
+	display: block;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #ddd;
+}
